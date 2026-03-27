@@ -1,0 +1,11 @@
+{
+  "Form Group": {
+    "prefix": "--fg",
+    "body": [
+      "<div class=\"form-group\">",
+      "\t<label for=\"${1:inputId}\">${1/(^|[-_])(\\w)/${1:+ }${2:/upcase}/g}</label>",
+      "\t<input type=\"${3|text,email,password,number,date,range|}\" id=\"${1}\" name=\"${1}\" ${4:required} />",
+      "</div>",
+    ],
+  },
+}
