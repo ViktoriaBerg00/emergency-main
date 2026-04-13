@@ -10,6 +10,11 @@
   border-radius: 0;
   margin: 60px auto 80px auto;
 }
+
+.info-graphic svg {
+  width: 100%;
+  height: 50rem;
+}
 .info-text h2 {
   line-height: 3rem;
   text-align: center;
