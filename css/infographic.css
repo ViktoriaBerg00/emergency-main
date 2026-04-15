@@ -45,3 +45,19 @@
 .info-box:nth-of-type(2n) {
   background-color: var(--color-card-bg-inverted);
 }
+
+#kjole,
+#jakke,
+#jeans {
+  fill: #6d3b3b;
+  stroke: #d8d2c7;
+  stroke-width: 2px;
+  transition: 0.2s ease;
+}
+
+#kjole:hover,
+#jakke:hover,
+#jeans:hover {
+  fill: #8a4a4a;
+  cursor: pointer;
+}

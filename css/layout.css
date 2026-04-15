@@ -1,34 +1,43 @@
 /* LAYOUT FOR MAIN CONTENT */
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   margin: 0 auto;
 }
+
 main {
   display: grid;
   row-gap: 1rem;
 }
+
 main > *:not(:first-child) {
   margin: 0 1rem;
 }
+
 main {
   grid-template-rows: min-content min-content 1fr min-content;
 }
+
 #instruction main {
   grid-template-rows: min-content min-content min-content 1fr min-content;
 }
+
 /* LAYOUT FOR HEADER AND FOOTER */
+
+header {
+  grid-row: 1;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
 }
 
-header {
-  grid-row: 1;
-  display: grid;
-  grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
-}
 header nav,
 footer nav {
   grid-column: 2 / 3;
@@ -36,24 +45,28 @@ footer nav {
   justify-content: space-between;
   align-items: center;
 }
+
 header nav > * {
   flex: 1;
 }
+
 nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
 header ul {
   height: 100%;
   width: clamp(175px, 50%, 300px);
 }
+
 footer ul {
   flex-direction: column;
   padding-left: 1rem;
 }
 
-/* LAYOUT FOR SECTIONS */
+/* LAYOUT FOR INSTRUCTION AND REGISTER */
 
 @media (width > 600px) {
   #instruction > main,
@@ -68,5 +81,161 @@ footer ul {
 
   h1 {
     grid-column: 1 / -1;
+  }
+}
+
+/* FORSIDE */
+
+#frontpage main {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* HERO */
+
+#main-disclamer {
+  background-color: var(--color-head-bg);
+  min-height: 260px;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+#main-disclamer-content {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1200px;
+}
+
+#hero-clock {
+  width: 150px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+#hero-text h1 {
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 0.9;
+  margin: 0 0 0.8rem 0;
+}
+
+#hero-text .sub {
+  font-size: clamp(1.4rem, 2.4vw, 2.4rem);
+  line-height: 1.2;
+  max-width: 28ch;
+}
+
+/* FORSIDE BLOKKE */
+
+.content-columns {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1rem;
+}
+
+.stack-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.stack-card {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 1rem;
+  background-color: #95a46f;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.stack-card {
+  background-color: var(--color-card-bg);
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+}
+.stack-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.stack-text {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+}
+
+.stack-text h3 {
+  background-color: #e34a58;
+  color: #fff8d9;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.stack-text p {
+  margin: 0;
+  line-height: 1.5;
+  color: #0f0d05;
+}
+
+.article-section {
+  display: grid;
+  gap: 1rem;
+  background-color: #334348;
+  padding: 1rem;
+  border-radius: 4px;
+  align-content: start;
+}
+
+.article-card {
+  color: #fff8d9;
+  padding: 0.5rem;
+}
+
+.article-top {
+  background-color: #e34a58;
+  color: #fff8d9;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.article-card h3 {
+  margin: 0 0 0.7rem 0;
+  font-size: 1rem;
+}
+
+.article-card p {
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.article-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.article-card .cta_btn,
+.stack-text .cta_btn {
+  background-color: #9b7a6c;
+  color: #fff8d9;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  width: max-content;
+}
+
+@media (width > 900px) {
+  .content-columns {
+    grid-template-columns: 2fr 0.9fr;
+    align-items: start;
   }
 }

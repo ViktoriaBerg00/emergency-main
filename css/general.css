@@ -35,8 +35,19 @@ h1 {
   font-weight: var(--font-weight-bold);
   color: var(--color-text-inverted);
   margin: 5px 0;
-  line-height: 1.3rem;
+  line-height: 1.1;
   text-align: left;
+  letter-spacing: 0.03em;
+}
+
+h2 {
+  font-size: var(--headline2-size);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--headline3-size);
+  font-weight: var(--font-weight-medium);
 }
 
 #instruction h1,
@@ -100,10 +111,11 @@ nav a {
 header nav li a {
   margin: 1.5rem;
   background-color: var(--color-link-bg);
-  color: var(--color-text);
+  color: var(--color-text-inverted);
   font-size: var(--followup-text-size);
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: var(--border-radius-links);
+  transition: 0.2s ease;
 }
 /* Pilen efter menu-tekst */
 header > nav li > a:after {
@@ -124,4 +136,14 @@ footer {
 
 footer a {
   font-size: 0.7rem;
+}
+
+/* FORSIDE */
+
+#frontpage h1 {
+  color: var(--color-text-inverted);
+}
+
+#frontpage main section {
+  padding: 0;
 }

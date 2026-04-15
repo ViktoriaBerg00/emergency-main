@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/burger.css">
   <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/forms.css">
   <link rel="icon" type="image/png" href="img/fav.png">
   <title>Emergency Site</title>
 </head>
@@ -19,7 +19,9 @@
   <header>
     <nav>
       <div id="logotype-wrapper" class="logo">
-        <a href="index.html"> LOGO-TYPE </a>
+        <a href="index.html">
+          <img src="pictures/logotype.png" alt="Tidskrise logo">
+        </a>
       </div>
       <ul class="menu">
         <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
@@ -37,15 +39,64 @@
     <h1>INDBERET</h1>
     <section id="form-section">
       <article id="form-info">
-        <h2>Overskrift</h2>
-        <p>Tekst</p>
+        <h2>Indberet din tidskrise</h2>
+        <p>Har du oplevet en fejl i tidslinjen? Udfyld formularen nedenfor, så Modepatruljen kan analysere din situation
+          og
+          hjælpe dig tilbage til den korrekte tidsperiode.</p>
       </article>
-      <form id="webform"></form>
+      <form id="webform">
+
+        <div class="form-group">
+          <label for="name">Navn på tidsrejsende</label>
+          <input type="text" id="name" name="name" placeholder="Skriv dit navn" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Kontakt-email</label>
+          <input type="email" id="email" name="email" placeholder="navn@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="period">Hvilken tidsperiode er du fanget i?</label>
+          <select id="period" name="period" required>
+            <option value="">Vælg en tidsperiode</option>
+            <option value="1800">1800-tallet</option>
+            <option value="1950">1950'erne</option>
+            <option value="1990">1990'erne</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Hvor alvorlig er tidskrisen?</legend>
+          <label><input type="radio" name="urgency" value="lav" required> Lav</label>
+          <label><input type="radio" name="urgency" value="mellem"> Mellem</label>
+          <label><input type="radio" name="urgency" value="høj"> Høj</label>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>Hvilke problemer oplever du?</legend>
+          <label><input type="checkbox" name="problem[]"> Mit outfit tiltrækker mistanke</label>
+          <label><input type="checkbox" name="problem[]"> Materialet eksisterer ikke i denne tidsperiode</label>
+          <label><input type="checkbox" name="problem[]"> Jeg bliver aktivt stirret på</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="description">Beskriv din situation</label>
+          <textarea id="description" rows="4" placeholder="Hvad er gået galt?"></textarea>
+        </div>
+
+        <button type="submit">Indsend tidskrise</button>
+
+      </form>
     </section>
     <section id="form-summary">
-      <h2>Summary</h2>
+      <h2>Opsummering</h2>
       <article>
-        <p class="placeholder">Opsummering</p>
+        <p><strong>Navn:</strong> <span id="sum-name">-</span></p>
+        <p><strong>Email:</strong> <span id="sum-email">-</span></p>
+        <p><strong>Tidsperiode:</strong> <span id="sum-period">-</span></p>
+        <p><strong>Alvorlighed:</strong> <span id="sum-urgency">-</span></p>
+        <p><strong>Situation:</strong> <span id="sum-description">-</span></p>
       </article>
     </section>
   </main>
@@ -71,6 +122,7 @@
       </ul>
     </nav>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

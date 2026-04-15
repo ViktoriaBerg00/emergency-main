@@ -1,32 +1,133 @@
-#webform {
-  background-color: var(--form-background-color);
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background-color: #fffaf8;
 }
 
-#form-section,
-#form-summary {
+input:required:invalid,
+select:required:invalid {
+  border-color: var(--color-accent-dark);
+}
+
+input:required:valid,
+select:required:valid {
+  border-color: var(--color-detail-green);
+}
+
+button {
+  background-color: var(--color-head-bg);
+  color: var(--color-text-inverted);
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--color-accent);
+}
+
+#webform {
+  border: 2px solid var(--color-accent);
+  border-radius: 10px;
+}
+
+fieldset {
+  padding: 1rem;
+  background-color: var(--color-card-bg);
+  border-radius: 8px;
+}
+
+legend {
+  color: var(--color-accent);
+}
+
+#form-section {
   background-color: var(--info-background-color);
-  padding: 0;
+  padding: 1.5rem;
+  border-radius: 12px;
 }
-#form-summary h2 {
-  line-height: 3rem;
-  text-align: center;
-  background-color: var(--headline-bg-color-inverted);
-  color: var(--headline-color-inverted);
-  padding-top: 5px;
+
+#form-info {
+  margin-bottom: 1.5rem;
 }
-#form-summary h3 {
-  font-size: 0.8rem;
-  line-height: 0.8rem;
+
+#webform {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background-color: var(--form-background-color);
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+}
+
+.form-group,
+fieldset {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.form-group {
+  margin-bottom: 0.3rem;
+}
+
+fieldset {
+  padding: 1rem;
+  background-color: var(--color-card-bg);
+  border-radius: 10px;
+}
+
+label,
+legend {
   font-weight: 600;
-  margin: 0;
-  padding: 0;
 }
-#form-summary > *:not(:first-child) {
-  margin: 0 clamp(1rem, 10%, 7rem);
+
+legend {
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
 }
-#form-summary p {
-  font-size: 0.8rem;
-  line-height: 1.3;
-  margin: 0 0 1.2rem 0;
-  padding: 0;
+
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.9rem;
+  font: inherit;
+  border: 2px solid #b8b8b8;
+  border-radius: 8px;
+  background-color: white;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+fieldset label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+button {
+  justify-self: start;
+  padding: 0.9rem 1.4rem;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-head-bg);
 }
