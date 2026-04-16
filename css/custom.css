@@ -1,41 +1,54 @@
 :root {
+  color-scheme: light dark;
+
   /* Background */
-  --color-bg: #cbc7bd;
-  --color-card-bg: #cbc7bd;
-  --color-card-bg-inverted: #575757;
+  --color-bg: light-dark(#f6f1e8, #171311);
+  --color-card-bg: light-dark(#e9ddcc, #241c19);
+  --color-card-bg-inverted: light-dark(#4b382f, #f3e8da);
 
   /* Header / footer */
-  --color-head-bg: #1e1e1e;
+  --color-head-bg: light-dark(#4b382f, #1d1613);
 
   /* Logotype */
-  --color-logotype-bg: #1e1e1e;
-  --color-text-logotype: #e3dfc0;
+  --color-logotype-bg: light-dark(#d8c7b0, #2b221e);
+  --color-text-logotype: light-dark(#2b211d, #f6efe6);
   --font-logotype-size: 1.1rem;
 
   /* Menu */
-  --color-menu-bg: #cbc7bd;
+  --color-menu-bg: light-dark(#ddcfbb, #2a211d);
 
   /* Links */
-  --color-link-bg: #847f7e;
-  --color-link-hover: #e34a58;
-  --color-link-active: #d74c3c;
+  --color-link-bg: light-dark(#4b382f, #3a2c26);
+  --color-link-hover: light-dark(#c76a4a, #e08a68);
+  --color-link-active: light-dark(#b6543c, #f09b79);
   --border-radius-links: 4px;
 
   /* Headlines */
   --font-h1-size: 2.2rem;
   --font-h2-size: 1.5rem;
-  --font-h3-size: 1.1rem;
+  --font-h3-size: 1rem;
 
   --headline2-size: 1.5rem;
   --headline3-size: 1.1rem;
   --font-sub1-size: 1rem;
 
   /* Headline colors */
-  --color-headline-bg: #575050;
+  --color-headline-bg: light-dark(#4b382f, #f3e8da);
 
   /* Text */
-  --color-text: #1e1e1e;
-  --color-text-inverted: #e3dfc0;
+  --color-text: light-dark(#2c2521, #f4ede7);
+  --color-text-inverted: light-dark(#fffaf5, #1a1412);
+
+  /* Cards */
+  --color-cta-card-bg: light-dark(#d97a5d, #c86f52);
+  --color-cta-card-bg-inverted: light-dark(#a86f8d, #d7b0c4);
+
+  /* Fonts */
+  --font-family-sans: "Rubik", ui-sans-serif, sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 300;
+  --font-weight-light: 200;
 
   /* Other text */
   --followup-text-size: 1rem;
@@ -46,35 +59,27 @@
   /* Borders */
   --border-radius: 8px;
 
-  /* Cards */
-  --color-cta-card-bg: #d74c3c;
-  --color-cta-card-bg-inverted: #c280c4;
-
-  /* Fonts */
-  --font-family-sans: "Rubik", ui-sans-serif, sans-serif;
-  --font-weight-bold: 700;
-  --font-weight-medium: 500;
-  --font-weight-regular: 300;
-  --font-weight-light: 200;
-
   /* Infographic */
-  --color-info-bg: #d8d2c7;
+  --color-info-bg: light-dark(#e1d4c2, #2a211d);
+  --color-info-btn-fill: light-dark(#b85a44, #de8468);
+  --color-info-btn-stroke: light-dark(#b8a999, #5b4a42);
 
   /* Form */
-  --color-form-bg: #cbc7bd;
-  --color-form-accent: #d74c3c;
-  --color-form-text: #1e1e1e;
-  --color-form-placeholder: #7a7a7a;
+  --color-form-bg: light-dark(#f1e7da, #211917);
+  --color-form-accent: light-dark(#c76a4a, #e08a68);
+  --color-form-text: light-dark(#2c2521, #f4ede7);
+  --color-form-text-box: light-dark(#b9a999, #6c5c54);
+  --color-form-placeholder: light-dark(#fffdfa, #342925);
 
   /* Accent */
-  --color-accent: #b69c7a;
+  --color-accent: light-dark(#b85a44, #d8916f);
 
   /* Fashion */
-  --color-fashion: #c280c4;
-  --color-fashion-dark: #662d91;
-  --color-fashion-light: #eec1db;
-  --color-detail-green: #023f23;
+  --color-fashion: light-dark(#b7849c, #c99bb1);
+  --color-fashion-dark: light-dark(#87586c, #ddb2c6);
+  --color-fashion-light: light-dark(#f1e6ea, #433038);
+  --color-detail-green: light-dark(#5d725d, #8faa8c);
 
   /* CTA */
-  --color-cta: #e34a58;
+  --color-cta: light-dark(#c45d42, #e08a68);
 }

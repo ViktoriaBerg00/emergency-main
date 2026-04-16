@@ -94,9 +94,9 @@ textarea {
   max-width: 100%;
   padding: 0.9rem;
   font: inherit;
-  border: 2px solid #b8b8b8;
+  border: 2px solid var(--color-form-text-box);
   border-radius: 8px;
-  background-color: white;
+  background-color: var(--color-form-placeholder);
 }
 
 textarea {
@@ -121,7 +121,7 @@ button {
   justify-self: start;
   padding: 0.9rem 1.4rem;
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-form-placeholder);
   border: none;
   border-radius: 8px;
   font-weight: 600;

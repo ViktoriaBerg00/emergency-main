@@ -49,8 +49,8 @@
 #kjole,
 #jakke,
 #jeans {
-  fill: #6d3b3b;
-  stroke: #d8d2c7;
+  fill: var(--color-info-btn-fill);
+  stroke: var(--color-info-btn-stroke);
   stroke-width: 2px;
   transition: 0.2s ease;
 }
@@ -58,6 +58,6 @@
 #kjole:hover,
 #jakke:hover,
 #jeans:hover {
-  fill: #8a4a4a;
+  fill: var(--color-info-btn-fill);
   cursor: pointer;
 }
