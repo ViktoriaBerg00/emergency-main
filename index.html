@@ -19,14 +19,19 @@
     <nav>
       <div id="logotype-wrapper" class="logo">
         <a href="index.html">
-          <img src="pictures/logotype.png" alt="Tidskrise logo">
+          <img id="site-logo" src="pictures/logotype.png" alt="Tidskrise logo">
         </a>
       </div>
       <ul class="menu">
         <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
         <li><a class="menuItem" href="register.html">Indberet</a></li>
       </ul>
-      <button id="darkmode"> Dark mode</button>
+      <button id="darkmode" aria-label="Skift mellem light mode og dark mode">
+        <span class="toggle-track">
+          <span class="toggle-thumb"></span>
+        </span>
+        <span class="toggle-label">Light mode</span>
+      </button>
       <button class="burger">
         <span class="line"></span>
         <span class="line"></span>
@@ -36,41 +41,185 @@
   </header>
 
   <main>
-    <section id="main-disclamer">
-      <div id="main-disclamer-content">
-        <img id="hero-clock" src="pictures/clock.svg" alt="Klokke illustration">
-        <div id="hero-text">
-          <h1>TIDSKRISE</h1>
-          <p class="sub">Når dit outfit lander i den forkerte tidsperiode</p>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-alert">ADVARSEL: TIDSLINJEFEJL</p>
+        <h1>TIDSKRISE</h1>
+        <p class="hero-description">
+          Dit outfit kan afsløre dig. Undersøg garderoben og find den rigtige vej tilbage.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="instruction.html" class="hero-btn">Undersøg garderoben</a>
+          <a href="register.html" class="hero-btn hero-btn-secondary">Indberet</a>
         </div>
       </div>
+
+      <div class="hero-visual">
+        <img src="pictures/clock.svg" alt="Tidskrise ur">
+      </div>
     </section>
+
+    <section class="frontpage-split">
+      <div class="left">
+        <section>
+          <h2>Undersøg garderoben</h2>
+          <div class="grid_1-1">
+            <img src="pictures/frontpage1.png" alt="Tidsrejse gennem garderoben">
+            <div class="split-text">
+              <p>
+                Gå på opdagelse i garderoben og klik på tøjet for at finde ud af,
+                hvilken tidsperiode du er havnet i. Hvert outfit giver nye spor om,
+                hvordan du kan blende ind og undgå at skabe kaos i tidslinjen.
+              </p>
+              <a href="instruction.html" class="split-btn">Udforsk garderoben</a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div>
+            <h2>Indberet din tidskrise</h2>
+            <div class="grid_1-1">
+              <img src="pictures/timetravel.png" alt="Indberet tidskrise">
+              <div class="split-text">
+                <p>
+                  Har du valgt forkert outfit eller oplevet en fejl i tidslinjen?
+                  Send din indberetning til Modepatruljen, så din situation kan blive
+                  analyseret, før den udvikler sig til en større tidskrise.
+                </p>
+                <a href="register.html" class="split-btn split-btn-secondary">Send indberetning</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="right">
+        <article>
+          <p class="news-tag">NYHED</p>
+          <h2>Mystisk kvinde i victoriansk kjole skaber opmærksomhed</h2>
+          <p>
+            En ung kvinde blev set vandre gennem byen iført en detaljeret victoriansk
+            kjole. Vidner fortæller, at hun virkede forvirret og ude af trit med
+            omgivelserne.
+          </p>
+          <button popovertarget="artikel1_popover">Læs mere</button>
+
+          <div id="artikel1_popover" popover>
+            <button popovertarget="artikel1_popover">Luk</button>
+            <h2>Mystisk kvinde i victoriansk kjole skaber opmærksomhed</h2>
+            <p>
+              En ung kvinde blev i går observeret i byens centrum iført en kjole, der
+              minder om mode fra 1800-tallet.
+            </p>
+            <p>
+              Flere vidner fortæller, at hun stoppede folk på gaden og spurgte efter en
+              “tidsportal”. Eksperter mistænker, at der kan være tale om en tidsfejl.
+            </p>
+            <p>
+              Hvis kvinden ikke finder et outfit, der passer bedre til perioden,
+              risikerer hun at tiltrække endnu mere opmærksomhed og forstyrre
+              tidslinjen yderligere.
+            </p>
+            <img src="pictures/artikel1.png" alt="Kvinde fra en anden tidsperiode">
+          </div>
+        </article>
+
+        <article>
+          <p class="news-tag">NYHED</p>
+          <h2>Rift i himlen regner med objekter fra forskellige tidsperioder</h2>
+          <p>
+            Borgere rapporterer om mærkelige fænomener, hvor genstande falder fra
+            himlen — fra gamle lommeure til moderne sneakers og futuristiske accessories.
+          </p>
+          <button popovertarget="artikel2_popover">Læs mere</button>
+
+          <div id="artikel2_popover" popover>
+            <button popovertarget="artikel2_popover">Luk</button>
+            <h2>Rift i himlen regner med objekter fra forskellige tidsperioder</h2>
+            <p>
+              Et uforklarligt fænomen har ramt byen: en synlig rift på himlen har åbnet
+              sig, og genstande fra forskellige tidsperioder falder nu ned over gaderne.
+            </p>
+            <p>
+              Blandt fundene er både victorianske smykker, 1950’er jakker og moderne
+              sko. Forskere mener, at tidslinjen er destabiliseret, og at flere
+              tidsperioder overlapper hinanden.
+            </p>
+            <p>
+              Modepatruljen advarer: Vælg dit outfit med omhu. Det kan være afgørende
+              for, om du passer ind — eller bliver afsløret.
+            </p>
+            <img src="pictures/artikel2.png" alt="Genstande fra forskellige tidsperioder">
+          </div>
+        </article>
+
+        <article>
+          <p class="news-tag">NYHED</p>
+          <h2>Flere borgere rapporterer forkerte outfits i deres egen tid</h2>
+          <p>
+            Flere personer oplever pludselig at være klædt i tøj, der slet ikke passer
+            til deres egen tidsperiode. Eksperter frygter, at garderoberne er blevet blandet sammen.
+          </p>
+          <button popovertarget="artikel3_popover">Læs mere</button>
+
+          <div id="artikel3_popover" popover>
+            <button popovertarget="artikel3_popover">Luk</button>
+            <h2>Flere borgere rapporterer forkerte outfits i deres egen tid</h2>
+            <p>
+              Et stigende antal borgere fortæller, at deres tøj ændrer sig uden varsel.
+              En person vågnede i en 90’er denimjakke, mens en anden pludselig bar
+              handsker og frakke fra 1800-tallet.
+            </p>
+            <p>
+              Eksperter frygter, at garderober på tværs af tidslinjen er blevet
+              forbundet. Det betyder, at enhver kan risikere at ende i et forkert
+              outfit — og dermed i den forkerte tid.
+            </p>
+            <p>
+              Modepatruljen anbefaler at undersøge garderoben nøje og reagere hurtigt
+              ved tegn på tidsforstyrrelser.
+            </p>
+            <img src="pictures/artikel3.png" alt="Forkerte outfits i tidslinjen">
+          </div>
+        </article>
+      </div>
+    </section>
+
 
   </main>
 
   <footer>
-    <nav>
+    <nav class="footer-grid">
+
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><strong>Navigation</strong></li>
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="instruction.html">Nærkontakt</a></li>
+        <li><a href="register.html">Indberet</a></li>
       </ul>
+
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><strong>Om Tidskrise</strong></li>
+        <li><a href="#">Hvad er en tidsfejl?</a></li>
+        <li><a href="#">Modepatruljen</a></li>
+        <li><a href="#">Tidsregler</a></li>
       </ul>
+
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><strong>Hjælp</strong></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Rapporter fejl</a></li>
       </ul>
+
     </nav>
+
+    <p class="footer-bottom">© Tidskrise – Modepatruljen overvåger tidslinjen</p>
   </footer>
   <script src="js/darkmode.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/burger.js"></script>
 </body>
 
 </html>

@@ -2,46 +2,46 @@
   color-scheme: light dark;
 
   /* Background */
-  --color-bg: light-dark(#f6f1e8, #171311);
-  --color-card-bg: light-dark(#e9ddcc, #241c19);
-  --color-card-bg-inverted: light-dark(#4b382f, #f3e8da);
+  --color-bg: light-dark(#f6f1e9, #2b211b);
+  --color-card-bg: light-dark(#fffaf4, #3a2c24);
+  --color-card-bg-inverted: light-dark(#4a352b, #f6f1e9);
 
   /* Header / footer */
-  --color-head-bg: light-dark(#4b382f, #1d1613);
+  --color-head-bg: light-dark(#e8dccb, #3e2c23);
 
   /* Logotype */
-  --color-logotype-bg: light-dark(#d8c7b0, #2b221e);
-  --color-text-logotype: light-dark(#2b211d, #f6efe6);
+  --color-logotype-bg: light-dark(#e8dccb, #3e2c23);
+  --color-text-logotype: light-dark(#2b211b, #f6f1e9);
   --font-logotype-size: 1.1rem;
 
   /* Menu */
-  --color-menu-bg: light-dark(#ddcfbb, #2a211d);
+  --color-menu-bg: light-dark(#e8dccb, #3e2c23);
 
   /* Links */
-  --color-link-bg: light-dark(#4b382f, #3a2c26);
-  --color-link-hover: light-dark(#c76a4a, #e08a68);
-  --color-link-active: light-dark(#b6543c, #f09b79);
-  --border-radius-links: 4px;
+  --color-link-bg: light-dark(#6b4f3a, #b5524a);
+  --color-link-hover: light-dark(#b5524a, #d46a5f);
+  --color-link-active: light-dark(#8c2f2f, #8c2f2f);
+  --border-radius-links: 6px;
 
   /* Headlines */
-  --font-h1-size: 2.2rem;
-  --font-h2-size: 1.5rem;
-  --font-h3-size: 1rem;
+  --font-h1-size: 2.6rem;
+  --font-h2-size: 1.7rem;
+  --font-h3-size: 1.1rem;
 
-  --headline2-size: 1.5rem;
-  --headline3-size: 1.1rem;
+  --headline2-size: 1.7rem;
+  --headline3-size: 1.15rem;
   --font-sub1-size: 1rem;
 
   /* Headline colors */
-  --color-headline-bg: light-dark(#4b382f, #f3e8da);
+  --color-headline-bg: light-dark(#3e2c23, #f6f1e9);
 
   /* Text */
-  --color-text: light-dark(#2c2521, #f4ede7);
-  --color-text-inverted: light-dark(#fffaf5, #1a1412);
+  --color-text: light-dark(#2b211b, #f6f1e9);
+  --color-text-inverted: light-dark(#f6f1e9, #2b211b);
 
   /* Cards */
-  --color-cta-card-bg: light-dark(#d97a5d, #c86f52);
-  --color-cta-card-bg-inverted: light-dark(#a86f8d, #d7b0c4);
+  --color-cta-card-bg: light-dark(#b5524a, #b5524a);
+  --color-cta-card-bg-inverted: light-dark(#d98c7a, #f6f1e9);
 
   /* Fonts */
   --font-family-sans: "Rubik", ui-sans-serif, sans-serif;
@@ -54,32 +54,36 @@
   --followup-text-size: 1rem;
 
   /* Margins */
-  --margin-head-bottom: 5px;
+  --margin-head-bottom: 8px;
 
   /* Borders */
-  --border-radius: 8px;
+  --border-radius: 12px;
 
   /* Infographic */
-  --color-info-bg: light-dark(#e1d4c2, #2a211d);
-  --color-info-btn-fill: light-dark(#b85a44, #de8468);
-  --color-info-btn-stroke: light-dark(#b8a999, #5b4a42);
+  --color-info-bg: light-dark(#e8dccb, #3e2c23);
+  --color-info-btn-fill: light-dark(#b5524a, #d46a5f);
+  --color-info-btn-stroke: light-dark(#d9c7b0, #f6f1e9);
 
   /* Form */
-  --color-form-bg: light-dark(#f1e7da, #211917);
-  --color-form-accent: light-dark(#c76a4a, #e08a68);
-  --color-form-text: light-dark(#2c2521, #f4ede7);
-  --color-form-text-box: light-dark(#b9a999, #6c5c54);
-  --color-form-placeholder: light-dark(#fffdfa, #342925);
+  --color-form-bg: light-dark(#f6f1e9, #2b211b);
+  --color-form-accent: light-dark(#2b211b, #d46a5f);
+  --color-form-text: light-dark(#2b211b, #f6f1e9);
+  --color-form-text-box: light-dark(#eadccf, #3a2c24);
+  --color-form-placeholder: light-dark(#d9c7b0, #d9c7b0);
 
   /* Accent */
-  --color-accent: light-dark(#b85a44, #d8916f);
-
-  /* Fashion */
-  --color-fashion: light-dark(#b7849c, #c99bb1);
-  --color-fashion-dark: light-dark(#87586c, #ddb2c6);
-  --color-fashion-light: light-dark(#f1e6ea, #433038);
-  --color-detail-green: light-dark(#5d725d, #8faa8c);
+  --color-accent: light-dark(#b5524a, #d46a5f);
+  --color-accent-dark: light-dark(#8c2f2f, #b5524a);
+  --color-detail-green: light-dark(#6c8a64, #8faa87);
 
   /* CTA */
-  --color-cta: light-dark(#c45d42, #e08a68);
+  --color-cta: light-dark(#b5524a, #d46a5f);
+
+  /* Helper variables */
+  --info-background-color: light-dark(#e8dccb, #3e2c23);
+  --form-background-color: light-dark(#fffaf4, #3a2c24);
+}
+
+html.dark {
+  color-scheme: dark;
 }

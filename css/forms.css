@@ -19,7 +19,6 @@ select:required:valid {
 button {
   background-color: var(--color-head-bg);
   color: var(--color-text-inverted);
-  cursor: pointer;
   border: none;
 }
 
@@ -125,7 +124,6 @@ button {
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  cursor: pointer;
 }
 
 button:hover {

@@ -20,14 +20,19 @@
     <nav>
       <div id="logotype-wrapper" class="logo">
         <a href="index.html">
-          <img src="pictures/logotype.png" alt="Tidskrise logo">
+          <img id="site-logo" src="pictures/logotype.png" alt="Tidskrise logo">
         </a>
       </div>
       <ul class="menu">
         <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
         <li><a class="menuItem" href="register.html">Indberet</a></li>
       </ul>
-      <button id="darkmode"> Dark mode</button>
+      <button id="darkmode" aria-label="Skift mellem light mode og dark mode">
+        <span class="toggle-track">
+          <span class="toggle-thumb"></span>
+        </span>
+        <span class="toggle-label">Light mode</span>
+      </button>
       <button class="burger">
         <span class="line"></span>
         <span class="line"></span>
@@ -37,7 +42,7 @@
   </header>
 
   <main>
-    <h1>INDBERET</h1>
+    <h1 class="inberet_h1">INDBERET</h1>
     <section id="form-section">
       <article id="form-info">
         <h2>Indberet din tidskrise</h2>
@@ -102,28 +107,36 @@
     </section>
   </main>
   <footer>
-    <nav>
+    <nav class="footer-grid">
+
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><strong>Navigation</strong></li>
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="instruction.html">Nærkontakt</a></li>
+        <li><a href="register.html">Indberet</a></li>
       </ul>
+
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><strong>Om Tidskrise</strong></li>
+        <li><a href="#">Hvad er en tidsfejl?</a></li>
+        <li><a href="#">Modepatruljen</a></li>
+        <li><a href="#">Tidsregler</a></li>
       </ul>
+
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><strong>Hjælp</strong></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Rapporter fejl</a></li>
       </ul>
+
     </nav>
+
+    <p class="footer-bottom">© Tidskrise – Modepatruljen overvåger tidslinjen</p>
   </footer>
   <script src="js/main.js"></script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/burger.js"></script>
 </body>
 
 </html>

@@ -3,6 +3,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* normal cursor */
+body {
+  cursor:
+    url("../pictures/distorted_cursor.png") 2 2,
+    auto;
+}
+
+/* hover / klikbare elementer */
+a,
+button,
+#darkmode,
+#darkmode *,
+.burger,
+.burger *,
+[popovertarget],
+[popovertarget] * {
+  cursor:
+    url("../pictures/distorted_cursor_hover.png") 2 2,
+    pointer !important;
+}
+.burger .line,
+.toggle-track,
+.toggle-thumb,
+.toggle-label {
+  cursor: inherit;
+}
+
+#kjole,
+#jakke,
+#jeans {
+  cursor:
+    url("../pictures/distorted_cursor_hover.png") 2 2,
+    pointer !important;
+}
+
+/*Andre elementer starter her */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   font-family: var(--font-family-sans);
   color: var(--color-text);
@@ -33,7 +75,6 @@ main section {
 h1 {
   font-size: var(--font-h1-size);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-inverted);
   margin: 5px 0;
   line-height: 1.1;
   text-align: left;
@@ -55,19 +96,27 @@ h3 {
   margin: 40px 0 20px 0;
   padding: 15px 30px;
   background-color: var(--color-head-bg);
+  color: var(--color-text);
   font-size: var(--font-h2-size);
 }
 #instruction p {
   grid-column: 1/-1;
   margin-bottom: 20px;
-  font-size: var(--font-h2-size);
+  font-size: 1rem;
   line-height: 1.5rem;
+}
+
+#frontpage h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-block: 3rem 2rem;
 }
 .sub {
   font-size: var(--font-sub1-size);
   font-weight: var(--font-weight-light);
   color: var(--color-text-inverted);
 }
+
 h2 {
   font-size: var(--headline2-size);
 }
@@ -80,8 +129,9 @@ main > h1 {
 /* NAVIGATION STRUCTURES */
 header > nav {
   height: 100%;
-  background-color: var(--color-menu-bg);
+  background-color: var(--color-head-bg);
 }
+
 nav ul {
   list-style: none;
 }
@@ -93,38 +143,66 @@ nav a {
   color: var(--color-text);
 }
 /* Måske skal du lave en ny regel for logotype-wrapper, når du har lavet din logotype */
+/* LOGO */
 #logotype-wrapper {
-  background-color: var(--color-logotype-bg);
+  background-color: transparent;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  height: 3.6rem;
+  height: auto;
+  padding: 0.4rem 0;
 }
+
 #logotype-wrapper > a {
-  color: var(--color-text-logotype);
-  font-size: var(--font-logotype-size);
-  font-weight: var(--font-weight-medium);
-  width: max-content;
+  display: flex;
+  align-items: center;
   margin-left: 1rem;
 }
-/* Global menu */
+
+#logotype-wrapper img {
+  display: block;
+  max-height: 70px;
+  width: auto;
+}
+
+/* HEADER / MENU */
+header > nav {
+  min-height: 90px;
+  background-color: var(--color-head-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  padding: 0;
+}
+
 header nav li a {
-  margin: 1.5rem;
+  display: inline-block;
+  margin: 0;
+  padding: 0.7rem 1.1rem;
   background-color: var(--color-link-bg);
   color: var(--color-text-inverted);
   font-size: var(--followup-text-size);
-  padding: 0.6rem 1rem;
-  border-radius: var(--border-radius-links);
+  border-radius: 6px;
   transition: 0.2s ease;
 }
-/* Pilen efter menu-tekst */
+
 header > nav li > a:after {
-  content: " \2192";
+  content: "";
 }
-/* Global menu hover effekt - Lav den om til det, du synes */
+
 nav a:hover {
   background-color: var(--color-link-hover);
+  color: var(--color-text);
 }
+
 nav a:active {
   background-color: var(--color-link-active);
 }
@@ -132,8 +210,156 @@ nav a:active {
 /* FOOTER */
 footer {
   background-color: var(--color-head-bg);
+  padding: 2rem 1rem;
+}
+footer a {
+  font-size: 1rem;
+  margin-bottom: 8rem;
+  padding-bottom: 2rem;
 }
 
-footer a {
-  font-size: 0.7rem;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-grid ul {
+  list-style: none;
+}
+
+.footer-grid li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-grid a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  text-align: center;
+  opacity: 0.7;
+}
+footer nav a:hover {
+  background-color: transparent;
+  color: var(--color-text);
+  text-decoration: underline;
+}
+/* dark mode knap*/
+#darkmode {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.35rem 0.8rem;
+  border: none;
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--color-text);
+  font: inherit;
+}
+
+.toggle-track {
+  position: relative;
+  width: 56px;
+  height: 30px;
+  border-radius: 999px;
+  background-color: #e8dccb;
+  transition: background-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+}
+
+.toggle-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+#darkmode .toggle-track {
+  background-color: light-dark(#3e2c23, #e8dccb);
+}
+
+html.dark .toggle-track {
+  background-color: var(--color-accent);
+}
+
+html.dark .toggle-thumb {
+  transform: translateX(26px);
+}
+
+html.dark .toggle-label {
+  color: var(--color-text);
+}
+
+/* ændringer på instruction side - på farver og tekst størrelse*/
+
+#instruction main > p {
+  font-size: 1.1rem;
+  line-height: 1.35;
+  max-width: 60ch;
+  color: var(--color-text);
+}
+
+/* højre analyseboks */
+#instruction .info-text {
+  background-color: var(--color-card-bg);
+  color: var(--color-text);
+  padding: 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+#instruction .info-text h2 {
+  background-color: var(--color-headline-bg);
+  color: var(--color-text-inverted);
+  padding: 1rem 1.2rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+#instruction .info-text p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--color-text);
+  margin: 0 1.2rem 1rem 1.2rem;
+}
+
+/* de to små bokse nederst */
+#instruction #efficiency,
+#instruction #requirement {
+  margin: 0 1.2rem 1rem 1.2rem;
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  border-radius: 6px;
+}
+
+/* lys boks */
+#instruction #efficiency {
+  background-color: #f5efe6;
+  color: #2f2f2f;
+}
+
+/* mørk boks */
+#instruction #requirement {
+  background-color: var(--color-headline-bg);
+  color: var(--color-text-inverted);
 }

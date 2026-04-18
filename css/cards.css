@@ -1,0 +1,165 @@
+/*  FORSIDE LAYOUT
+   To kolonner:
+   - venstre side med sektioner
+   - højre side med artikler
+*/
+.frontpage-split {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  margin: 3rem 1rem;
+  align-items: start;
+}
+
+.frontpage-split .left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.frontpage-split .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.frontpage-split .left section {
+  background-color: var(--color-head-bg); /* eller en mørkere variant */
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+}
+/* VENSTRE SIDE
+   Tekst ved siden af billede */
+.split-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+/* HØJRE SIDE
+   Artikelkort*/
+.frontpage-split .right article {
+  background-color: var(--color-card-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.frontpage-split .right button {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  background-color: var(--color-link-bg);
+  color: var(--color-text-inverted);
+  border: none;
+  border-radius: 6px;
+  transition: 0.2s ease;
+  font-size: 1rem;
+  font-family: rubik;
+}
+
+.frontpage-split .right button:hover {
+  background-color: var(--color-link-hover);
+  color: var(--color-text);
+  transform: translateY(-2px);
+}
+
+/* KNAPPER / LINKS
+   Bruges i venstre sektioner*/
+.split-btn {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 0.85rem 1.2rem;
+  background-color: var(--color-link-bg);
+  color: var(--color-text-inverted);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.split-btn:hover {
+  background-color: var(--color-link-hover);
+  color: var(--color-text);
+  transform: translateY(-2px);
+}
+
+/*  RESPONSIVE
+   Kolonner bliver til én kolonne på små skærme */
+@media screen and (max-width: 800px) {
+  .frontpage-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*POPOVER / ARTIKLER */
+[popover] {
+  width: min(90vw, 700px);
+  border: none;
+  border-radius: 16px;
+  padding: 2rem;
+  background-color: var(--color-card-bg);
+  color: var(--color-text);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+[popover]::backdrop {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+[popover] h2 {
+  margin-bottom: 1rem;
+}
+
+[popover] p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+[popover] img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+/* luk-knap */
+[popover] button {
+  margin-bottom: 1.5rem;
+  padding: 0.7rem 1rem;
+  background-color: var(--color-link-bg);
+  color: var(--color-text-inverted);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+[popover] button:hover {
+  background-color: var(--color-link-hover);
+  color: var(--color-text);
+}
+
+.news-tag {
+  color: var(--color-link-hover);
+}
+
+/* luft imellem tekster*/
+.frontpage-split .left h2 {
+  margin-bottom: 0.8rem;
+}
+
+.frontpage-split .left p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.split-btn {
+  margin-top: 1.2rem;
+}
+
+.frontpage-split .right h2 {
+  margin-bottom: 0.8rem;
+}
+
+.frontpage-split .right p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}

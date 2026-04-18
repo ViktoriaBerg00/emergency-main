@@ -72,16 +72,29 @@ if (webform) {
 function submitForm(event) {
   event.preventDefault();
 
-  const name = document.querySelector("#name").value;
-  const email = document.querySelector("#email").value;
-  const period = document.querySelector("#period").value;
-  const urgency = document.querySelector('input[name="urgency"]:checked');
-  const description = document.querySelector("#description").value;
+  const nameField = document.querySelector("#name");
+  const emailField = document.querySelector("#email");
+  const periodField = document.querySelector("#period");
+  const urgencyField = document.querySelector('input[name="urgency"]:checked');
+  const descriptionField = document.querySelector("#description");
 
-  document.querySelector("#sum-name").textContent = name;
-  document.querySelector("#sum-email").textContent = email;
-  document.querySelector("#sum-period").textContent = period;
-  document.querySelector("#sum-urgency").textContent = urgency ? urgency.value : "-";
-  document.querySelector("#sum-description").textContent = description;
-  document.querySelector("#sum-description").textContent = description ? description : "Ingen beskrivelse angivet";
+  const name = nameField ? nameField.value : "";
+  const email = emailField ? emailField.value : "";
+  const period = periodField ? periodField.value : "";
+  const urgency = urgencyField ? urgencyField.value : "-";
+  const description = descriptionField ? descriptionField.value : "";
+
+  const sumName = document.querySelector("#sum-name");
+  const sumEmail = document.querySelector("#sum-email");
+  const sumPeriod = document.querySelector("#sum-period");
+  const sumUrgency = document.querySelector("#sum-urgency");
+  const sumDescription = document.querySelector("#sum-description");
+
+  if (sumName) sumName.textContent = name || "Ikke angivet";
+  if (sumEmail) sumEmail.textContent = email || "Ikke angivet";
+  if (sumPeriod) sumPeriod.textContent = period || "Ikke valgt";
+  if (sumUrgency) sumUrgency.textContent = urgency;
+  if (sumDescription) {
+    sumDescription.textContent = description ? description : "Ingen beskrivelse angivet";
+  }
 }

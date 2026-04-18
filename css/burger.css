@@ -1,64 +1,177 @@
 .burger {
   width: 30px;
-  height: 20px;
-  cursor: pointer;
+  height: 24px;
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  z-index: 1001;
 }
 
 .burger .line {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--color-text-inverted);
+  background-color: #fffcfc;
   margin-bottom: 5px;
   transition: 0.2s linear;
 }
-.burger {
-  display: none;
+
+.burger .line:last-child {
+  margin-bottom: 0;
 }
-@media screen and (width < 800px) {
-  .menu {
-    /* display: none; */
-  }
-  .logo {
-    flex: 0 0 50vw;
-  }
+
+html.dark .burger {
+  background-color: transparent;
+}
+
+html.dark .burger:hover .line {
+  background-color: var(--color-accent);
+}
+@media screen and (max-width: 1000px) {
   .burger {
-    /* display: block; */
-    background-color: transparent;
-    border: 0;
-    flex: 0 0 auto;
-    margin: 0 20px;
+    display: block;
   }
+
+  .menu {
+    display: none;
+  }
+
+  #darkmode {
+    margin-left: auto;
+  }
+
   .burger.active .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.2s linear;
   }
+
   .burger.active .line:nth-child(2) {
     opacity: 0;
-    transition: 0.15s linear;
   }
+
   .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    transition: 0.2s linear;
+    transform: rotate(-45deg) translate(6px, -6px);
   }
+
+  header nav {
+    position: relative;
+  }
+
   nav.active .menu {
-    display: block;
-    background-color: var(--color-menu-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
     position: absolute;
-    top: 3.6rem;
+    top: 100%;
     right: 0;
-    width: clamp(200px, 50vw, 400px);
-    z-index: 1;
-    opacity: 0.8;
+    margin-top: 2rem;
+
+    width: 280px;
+    height: auto;
+    padding: 1rem;
+    margin-left: 0;
+
+    background-color: var(--color-head-bg);
+    box-sizing: border-box;
+    gap: 0.75rem;
+    z-index: 999;
+
+    list-style: none;
   }
-  header > nav li > a:after {
-    content: "";
-  }
+
   nav.active .menu li {
-    margin: 40px 20px;
-    text-align: right;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
+
   nav.active .menu a {
-    font-size: 24px;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0.9rem 1rem;
+
+    background-color: var(--color-link-bg);
+    color: var(--color-text-inverted);
+    text-decoration: none;
+    border-radius: 6px;
+
+    box-sizing: border-box;
+  }
+
+  nav.active .menu a:hover {
+    background-color: var(--color-link-hover);
+    color: var(--color-text);
+  }
+  header ul.menu {
+    width: 280px;
+    height: auto;
+    padding: 1rem;
   }
 }
+
+/* 
+NOTER TIL BURGER.CSS
+
+.burger
+- Definerer selve burger-knappen.
+- Har fast bredde og højde, ingen standard baggrund eller border.
+- Er skjult som udgangspunkt med display: none.
+
+.burger .line
+- De tre streger inde i burger-ikonet.
+- Hver streg får bredde, højde, farve og afstand.
+- transition gør animationen blød, når burgeren ændrer form.
+
+.burger .line:last-child
+- Fjerner ekstra margin under den sidste streg.
+
+@media screen and (max-width: 1000px)
+- Media query der gør burger-menuen aktiv på mindre skærme.
+- Her skifter navigationen fra desktop-menu til mobil-menu.
+
+.burger { display: block; }
+- Viser burger-knappen på små skærme.
+
+.menu { display: none; }
+- Skjuler den normale menu i mobilvisning, indtil burgeren bliver klikket.
+
+#darkmode
+- Giver dark mode-knappen plads i headeren, så layoutet fungerer sammen med burger-menuen.
+
+.burger.active .line:nth-child(1)
+.burger.active .line:nth-child(2)
+.burger.active .line:nth-child(3)
+- Laver animationen fra 3 streger til et kryds.
+- Første og tredje linje roterer.
+- Midterste linje skjules med opacity: 0.
+
+header nav { position: relative; }
+- Gør det muligt at placere dropdown-menuen absolut i forhold til navigationen.
+
+nav.active .menu
+- Viser burger-menuen, når nav får klassen "active" fra JavaScript.
+- Menuen vises som en lodret kolonne.
+- position: absolute placerer menuen under headeren.
+- width, padding og background-color giver menuen form og baggrund.
+- z-index sørger for, at menuen ligger ovenpå andet indhold.
+
+nav.active .menu li
+- Hver liste-item fylder hele menuens bredde.
+- Margin og padding nulstilles for at undgå skævt layout.
+
+nav.active .menu a
+- Selve link-knapperne i burger-menuen.
+- display: block og width: 100% gør, at knapperne fylder hele bredden.
+- padding, background-color og border-radius giver knap-look.
+
+nav.active .menu a:hover
+- Hover-effekt på links i burger-menuen.
+- Giver visuel feedback når brugeren holder musen over et link.
+
+header ul.menu
+- Overskriver desktop-menuens gamle styling i mobilvisning.
+- Sikrer at bredden og højden passer til burger-menuens dropdown-layout.
+*/
