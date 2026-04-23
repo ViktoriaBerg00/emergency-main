@@ -107,8 +107,9 @@ footer ul {
 @media (width > 600px) {
   #instruction > main,
   #register > main {
+    max-width: 1200px;
+    margin-inline: auto;
     grid-template-columns: 5fr 3fr;
-    grid-template-rows: auto auto 1fr auto;
 
     .qr {
       order: 1;

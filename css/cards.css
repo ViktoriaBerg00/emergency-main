@@ -23,7 +23,7 @@
   gap: 1.5rem;
 }
 .frontpage-split .left section {
-  background-color: var(--color-head-bg); /* eller en mørkere variant */
+  background-color: var(--color-head-bg);
   padding: 1.5rem;
   border-radius: var(--border-radius);
 }

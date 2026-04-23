@@ -111,6 +111,7 @@ h3 {
   text-align: center;
   margin-block: 3rem 2rem;
 }
+
 .sub {
   font-size: var(--font-sub1-size);
   font-weight: var(--font-weight-light);
